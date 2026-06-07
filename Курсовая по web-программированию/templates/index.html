@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Студенческая поликлиника города Махачкалы</title>
+
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        🏥 Студенческая поликлиника
+    </div>
+
+    <nav>
+        <button onclick="showPage('home')">Главная</button>
+        <button onclick="showPage('doctors')">Врачи</button>
+        <button onclick="showPage('services')">Услуги</button>
+        <button onclick="showPage('appointment')">Запись</button>
+        <button onclick="showPage('contacts')">Контакты</button>
+    </nav>
+</header>
+
+<!-- ГЛАВНАЯ -->
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <h1>
+            Добро пожаловать в студенческую поликлинику
+        </h1>
+
+        <p>
+            Мы оказываем медицинскую помощь студентам и жителям города.
+            Современное оборудование, квалифицированные специалисты
+            и интеллектуальный помощник доступны для вас ежедневно.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ВРАЧИ -->
+
+<section id="doctors" class="page">
+
+    <h2>Наши специалисты</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="/static/images/doctor1.jpg">
+            <h3>Иванов Иван</h3>
+            <p>Терапевт</p>
+        </div>
+
+        <div class="card">
+            <img src="/static/images/doctor2.jpg">
+            <h3>Петрова Анна</h3>
+            <p>Кардиолог</p>
+        </div>
+
+        <div class="card">
+            <img src="/static/images/doctor3.jpg">
+            <h3>Сидоров Алексей</h3>
+            <p>Невролог</p>
+        </div>
+
+        <div class="card">
+            <img src="/static/images/doctor4.jpg">
+            <h3>Ахмедова Зарема</h3>
+            <p>Офтальмолог</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- УСЛУГИ -->
+
+<section id="services" class="page">
+
+    <h2>Медицинские услуги</h2>
+
+    <div class="service-grid">
+
+        <div class="service">
+            Консультация терапевта
+        </div>
+
+        <div class="service">
+            Медицинские справки
+        </div>
+
+        <div class="service">
+            Электрокардиография (ЭКГ)
+        </div>
+
+        <div class="service">
+            Вакцинация
+        </div>
+
+        <div class="service">
+            Профилактический осмотр
+        </div>
+
+        <div class="service">
+            Лабораторные исследования
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ЗАПИСЬ -->
+
+<section id="appointment" class="page">
+
+    <h2>Запись к врачу</h2>
+
+    <form class="appointment-form">
+
+        <input
+            type="text"
+            placeholder="Ваше имя"
+            required
+        >
+
+        <input
+            type="tel"
+            placeholder="Телефон"
+            required
+        >
+
+        <select>
+
+            <option>
+                Выберите врача
+            </option>
+
+            <option>
+                Терапевт
+            </option>
+
+            <option>
+                Кардиолог
+            </option>
+
+            <option>
+                Невролог
+            </option>
+
+        </select>
+
+        <button type="submit">
+            Записаться
+        </button>
+
+    </form>
+
+</section>
+
+<!-- КОНТАКТЫ -->
+
+<section id="contacts" class="page">
+
+    <h2>Контакты</h2>
+
+    <div class="contacts">
+
+        <p>
+            📍 г. Махачкала
+        </p>
+
+        <p>
+            ☎ +7 (999) 123-45-67
+        </p>
+
+        <p>
+            ✉ clinic@mail.ru
+        </p>
+
+        <p>
+            🕒 Пн-Пт 08:00 - 18:00
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Студенческая поликлиника города Махачкалы
+</footer>
+
+<button
+    class="chat-button"
+    onclick="toggleChat()">
+    💬
+</button>
+
+<div class="chat-window" id="chatWindow">
+
+    <div class="chat-header">
+        ИИ-консультант
+    </div>
+
+    <div class="chat-messages" id="messages">
+
+        <div class="bot">
+            Здравствуйте! Чем могу помочь?
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Введите сообщение..."
+        >
+
+        <button onclick="sendMessage()">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
