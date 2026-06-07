@@ -145,3 +145,4 @@ async def chat(data: ChatRequest):
         return {
             "answer": f"Ошибка сервера: {str(e)}"
         }
+    
